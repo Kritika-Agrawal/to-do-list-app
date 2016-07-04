@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDOListApp</title>
+    
+    <style>
+		body{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1{
+			margin : auto !important;
+			text-align : center;
+			width : 30%;
+			font-family: Arial, Helvetica, sans-serif;
+			color : #337ab7 !important;
+		}
+		@media screen and (min-width : 600px){
+			#content{
+				margin : auto;
+				width : 60%;
+			}
+		}	
+		@media screen and (max-width : 680px){
+			#content{
+				margin : auto;
+				width : 100%;
+			}
+			h1{
+				font-size : 25px !important;
+			}
+		}
+		.table.no-border tr td{
+			border-width : 0px;
+			vertical-align : middle;
+		}
+		.remove-btn{
+			width : 100%;
+		}
+		.add{
+			margin-top : 10%;
+			width : auto;
+		}
+	</style>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    
+  </head>
+  <body>
+	<h1> To Do List </h1>
+    <div id="content">
+	</div>
+    <script type="text/babel" src="scripts/main.js"></script>
+  </body>
+</html>
