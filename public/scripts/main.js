@@ -80,7 +80,7 @@ var ToDoItemsList = React.createClass({
 			if(todoitem!=null){
 				return (
 					
-					<ToDoItem key = {todoitem.id} id = {todoitem.id} isStarted = {todoitem.isStarted} onStart = {this.handleStart.bind(this)} onRemoveTask = {this.handleRemove}> {todoitem.task} </ToDoItem>
+					<ToDoItem key = {todoitem.id} id = {todoitem.id} isStarted = {todoitem.isStarted} onStart = {this.handleStart} onRemoveTask = {this.handleRemove}> {todoitem.task} </ToDoItem>
 					
 				);
 			}
@@ -122,10 +122,10 @@ var ToDoItem = React.createClass({
 				<ToDoLabel isStarted = {this.props.isStarted}></ToDoLabel>
 			</td>
 			<td className = "col-md-1">	
-				<ToDoStartTask isStarted = {this.props.isStarted} onStart = {this.startClicked.bind(this)}> </ToDoStartTask>
+				<ToDoStartTask isStarted = {this.props.isStarted} onStart = {this.startClicked}> </ToDoStartTask>
 			</td>
 			<td className = "col-md-1">	
-				<button type = "button" id = {this.props.id} className = "btn btn-default btn-sm remove-btn" onClick = {this.removeTask.bind(this)}>
+				<button type = "button" id = {this.props.id} className = "btn btn-default btn-sm remove-btn" onClick = {this.removeTask}>
 					<span className="glyphicon glyphicon-remove"></span>
 				</button>
 			</td>	
@@ -147,7 +147,7 @@ var ToDoStartTask = React.createClass({
 			toShow = "hide btn btn-xs btn-primary";
 		}
 		return (
-			<button type = "button" className = {toShow} onClick = {this.getStarted.bind(this)}>
+			<button type = "button" className = {toShow} onClick = {this.getStarted}>
 				Start
 			</button>
 		);
