@@ -8,6 +8,7 @@ var TODOLIST_FILE = path.join(__dirname, 'ToDoList.json');
 var fs = require("fs");
 var stats = fs.statSync(TODOLIST_FILE);
 var fileSizeInBytes = stats["size"];
+var port = process.env.PORT || 3000 ;
 if(fileSizeInBytes == 0){
 	fs.writeFile(TODOLIST_FILE, "[]", function(err){
 		if (err){
@@ -107,10 +108,9 @@ app.post('/api/taskStart', function(req,res){
 	});
 });
 
-var server = app.listen(3000,"127.0.0.1", function (){
+var server = app.listen(port, function (){
 
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log("ToDoList app listening at http://%s:%s", host, port)
+ 
+  console.log("ToDoList app listening at http://localhost:",port);
 
 });
